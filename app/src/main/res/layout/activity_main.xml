@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.app.MySurfaceView
+        android:id="@+id/idSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/idColors"/>
+
+    <LinearLayout
+        android:id="@+id/idColors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:onClick="clickRed"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFC107"
+            android:onClick="clickYellow"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="#03A9F4"
+            android:onClick="clickBlue"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
+            android:onClick="clickGreen"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="#B5B5B5"
+            android:text="X"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:onClick="clickClear"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
